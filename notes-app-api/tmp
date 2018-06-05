@@ -1,0 +1,23 @@
+npx aws-api-gateway-cli-test --username ken@example.com --password Passw0rd! --user-pool-id us-east-1_KjjG3hoLt --app-client-id 7f3qk368rg9s34old3i2evh4ra --cognito-region us-east-1 --identity-pool-id us-east-1:cde5e337-3353-482d-964f-614f1924607f --invoke-url https://4yxkak7eak.execute-api.us-east-1.amazonaws.com/prod/ --api-gateway-region us-east-1 --path-template /notes --method POST --body "{\"content\":\"hello world\",\"attachment\":\"hello.jpg\"}"
+
+npx aws-api-gateway-cli-test \
+--username='ken@example.com' \
+--password='Passw0rd!' \
+--user-pool-id='us-east-1_KjjG3hoLt' \
+--app-client-id='7f3qk368rg9s34old3i2evh4ra' \
+--cognito-region='us-east-1' \
+--identity-pool-id='us-east-1:cde5e337-3353-482d-964f-614f1924607f' \
+--invoke-url='https://4yxkak7eak.execute-api.us-east-1.amazonaws.com/prod' \
+--api-gateway-region='us-east-1' \
+--path-template='/notes' \
+--method='POST' \
+--body='{"content":"hello world","attachment":"hello.jpg"}'
+
+aws cognito-idp sign-up \
+  --region us-east-1 \
+  --client-id 7f3qk368rg9s34old3i2evh4ra \
+  --username ken@testtest.com \
+  --password Passw0rd!
+  --custom-Nickname kenkenkenken
+
+  aws cognito-idp admin-update-user-attributes --user-pool-id us-east-1_KjjG3hoLt --username admin@example.com --user-attributes Name="custom:Nickname",Value="KenAeng"
